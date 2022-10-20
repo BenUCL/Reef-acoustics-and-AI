@@ -2,11 +2,17 @@
 
 This GitHub repository contains material to support the publication: Williams et al. (2023). Unlocking the soundscapes of coral reefs with artificial intelligence.
 
-This repo primarily provides code in the form of Google Colab notebooks that can be used to complete the full analysis used in the project. Better still, you can access a public [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) and run all the analysis from your web browser using Google Colab, without the need to download and install python or any other software, see further instructions below. This Google Drive contains:
+This repo primarily provides code in the form of Google Colab notebooks that can be used to complete the full analysis used in the project. Better still, you can access a public [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) and run all the analysis from your web browser using Google Colab, without the need to download and install python or any other software, see further instructions below. 
+
+This Github repo contains: 
 
 1. Code to perform all analysis.
-2. 1.4GB of sample audio files – the full dataset used in [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
-3. Results files as *.csv’s*, generated from all three datasets in full used in Williams et al. (2023).
+2. The Audioset package also required for analyis, adapted by [Sethi et al. (2020)](https://www.pnas.org/doi/full/10.1073/pnas.2004702117) from [Hershey et al. (2017)](https://arxiv.org/abs/1609.09430)
+
+The [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) also contains:
+
+3. 1.4GB of sample audio files – the full dataset used in [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
+4. Results files as *.csv’s*, generated from all three datasets in full used in Williams et al. (2023).
 
 
 # Citing
@@ -23,8 +29,7 @@ The workflow to replicate this analysis can be undertaken as follows:
 
 ### Pretrained CNN index classifier
 1.	Same as above, but instead of accessinf *compound index* scripts, access the *pretrained CNN* scripts.
-2.	This will extract features from audio with the VGGish pretrained CNN, using the Audioset package adapted by [Sethi et al. (2020)](https://www.pnas.org/doi/full/10.1073/pnas.2004702117) from [Hershey et al. (2017)](https://arxiv.org/abs/1609.09430)
-
+2.	This will extract features from audio with the VGGish pretrained CNN, using 
 ### Trained CNN classifier
 
 1.	Start with the *CNN minibatch creation.ipynb* script. This performs log-mel spectrogram extraction on the example audio, splits these in minibatches and saves these as pickle files in the */Results/minibatches_* folders, where '_' represents the training, validation or test folder.
