@@ -1,6 +1,6 @@
 # About the project
 
-This GitHub repository contains material to support the publication: Williams et al. (2023). Unlocking the soundscapes of coral reefs with artificial intelligence.
+This GitHub repository contains material to support the publication: Williams et al. (2023). Unlocking the soundscapes of coral reefs with artificial intelligence.  Whilst created with coral reef soundscapes in mind, methods used in this investigation could be applied to any soundscape field.
 
 This repo primarily provides code in the form of Google Colab notebooks that can be used to complete the full analysis used in the project. Better still, you can access a public [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) and run all the analysis from your web browser using Google Colab, without the need to download and install python or any other software, see further instructions below. 
 
@@ -45,6 +45,6 @@ The workflow to replicate this analysis can be undertaken as follows:
 
 
 ### UMAP and unsupervised clustering
-1.	UMAP plots are created using the *UMAP_.ipynb* scripts, where ‘_’ represents the datasets (Indo, Aud or Poly) to be used. These use the already calculated features sets for each method in the */Results/full_dataset_features* folder.
-2.	Unsupervised clustering is performed using the *Unsupervised clustering.ipynb* script, once again with the calculated features sets.
+1.	UMAP plots are created using the *UMAP_.ipynb* scripts, where ‘_’ represents the datasets (Indo, Aud or Poly) to be used. These use the already calculated features sets for each method in the */Results/full_dataset_features* folder. Once again, these can be easily adapted to run on your own feature sets.
+2.	Unsupervised clustering is performed using the *Unsupervised clustering.ipynb* script, using the already calculated features sets from this investigations data.
 
