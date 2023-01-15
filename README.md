@@ -8,7 +8,7 @@ This Github repo contains:
 
 1. Code to perform all analysis.
 2. The Audioset package also required for analyis, adapted by [Sethi et al. (2020)](https://www.pnas.org/doi/full/10.1073/pnas.2004702117) from [Hershey et al. (2017)](https://arxiv.org/abs/1609.09430).
-3. The full_dataset_features .zip which contains csv's of feature sets calculated from all three datasets using the compound index, pretrained CNN and features extracted by purpose trained CNNs.
+3. The full_dataset_features.zip which contains csv's of feature sets calculated from all three datasets using the compound index, pretrained CNN and features extracted by purpose trained CNNs.
 
 Additional items in the [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) are:
 
@@ -28,7 +28,7 @@ The workflow to replicate this analysis can be undertaken as follows:
 1.	Perform feature extraction from example audio using a suite of compound indices using the Feature_extraction_with_compound_index.ipynb script. This will save a *.csv* file called *compound_index_features* to the */Results* folder. The *.csv* files for the full datasets used in this study are used from here on to reproduce the investigations results. These are saved in the */Results/full_dataset_features*. However, you could adapt the downstream scripts to run on your own feature sets from other audio.
 2.	Next, a machine learning classifier is trained to identify the classes (e.g healthy and degraded) using the *Random forests compound index _ .ipynb*. Here, ‘_’ represents the dataset (Indo, Aus or Poly) and task (habitat or site identifier). This performs cross validation and outputs accuracy scores for all repeats.
 
-### Pretrained CNN index classifier
+### Pretrained CNN classifier
 1.	Same as above, but instead of accessinf *compound index* scripts, access the *pretrained CNN* scripts.
 2.	This will extract features from audio with the VGGish pretrained CNN, using 
 ### Trained CNN classifier
