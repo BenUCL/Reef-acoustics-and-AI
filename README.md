@@ -2,7 +2,7 @@
 
 This GitHub repository contains material to support the upcoming publication: Williams et al. (2023). Unlocking the soundscapes of coral reefs with artificial intelligence.  Whilst created with coral reef soundscapes in mind, methods used in this investigation could be applied to any soundscape field.
 
-This repo primarily provides code in the form of Google Colab notebooks that can be used to complete the full analysis used in the project. Better still, you can access a public [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) and run all the analysis from your web browser using Google Colab, without the need to download and install python or any other software, see further instructions below. 
+This repository provides code that can be used to complete the full analysis used in the project. Better still, you can download all the code alongside sample data from the Zenodo repository (https://zenodo.org/record/7512570). You can then upload this to your own Google Drive account and run all the analysis from your web browser using Google Colab, without the need to download and install python or any other software, see further instructions below. 
 
 This Github repo contains: 
 
@@ -10,7 +10,7 @@ This Github repo contains:
 2. The Audioset package also required for analyis, adapted by [Sethi et al. (2020)](https://www.pnas.org/doi/full/10.1073/pnas.2004702117) from [Hershey et al. (2017)](https://arxiv.org/abs/1609.09430).
 3. The full_dataset_features.zip which contains csv's of feature sets calculated from all three datasets using the compound index, pretrained CNN and features extracted by purpose trained CNNs.
 
-Additional items in the [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) are:
+Additional items in the Zenodo repository [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) are:
 
 3. 1.4GB of sample audio files – the full dataset used in [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
 4. Results files as *.csv’s*, generated from all three datasets in full used in Williams et al. (2023).
@@ -20,7 +20,7 @@ Additional items in the [Google Drive](https://drive.google.com/drive/folders/1B
 If you use any code from this project, please cite: (tbc)
 
 # Useage
-The performance of three methods at supervised classifier and unsupervised clustering tasks were compared in this paper. To run the full workflow for each from your browser, copy the [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) folder to your own Google Drive and save it as ‘Reef soundscapes with AI’ in your ‘My Drive’ folder (saving elsewhere on your drive, or with a different name, will prevent scripts from being able to find the right file path). These scripts will run on the sample audio included in this folder. 
+The performance of three methods at supervised classifier and unsupervised clustering tasks were compared in this paper. To run the full workflow for each from your browser, unzip the downloaded Zenodo folder and upload this to your own Google Drive and save it as ‘Reef soundscapes with AI’ in your ‘My Drive’ folder (saving elsewhere on your drive, or with a different name, will prevent scripts from being able to find the right file path). These scripts will run on the sample audio included in this folder. 
 
 The workflow to replicate this analysis can be undertaken as follows:
 
