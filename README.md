@@ -10,9 +10,9 @@ This Github repo contains:
 2. The Audioset package also required for analyis, adapted by [Sethi et al. (2020)](https://www.pnas.org/doi/full/10.1073/pnas.2004702117) from [Hershey et al. (2017)](https://arxiv.org/abs/1609.09430).
 3. The full_dataset_features.zip which contains csv's of feature sets calculated from all three datasets using the compound index, pretrained CNN and features extracted by purpose trained CNNs.
 
-Additional items in the Zenodo repository [Google Drive](https://drive.google.com/drive/folders/1B4_gBWM61l18D8KcSTX09j8eeCIvrbzz?usp=sharing) are:
+Additional items in the Zenodo repository are:
 
-3. 1.4GB of sample audio files – the full dataset used in [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
+3. 1.4GB of sample audio files – this is the full dataset used in previous work [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
 4. Results files as *.csv’s*, generated from all three datasets in full used in Williams et al. (2023).
 
 
