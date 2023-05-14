@@ -15,7 +15,7 @@ Additional items in the Zenodo repository are:
 3. audio_dir: 1.4GB of sample audio files – this is the full dataset used in previous work [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
 4. Results folder: 
     - CNN_predictions: *csv* files of the trained CNN class prediction for the habitat and site tasks for all three datasets. These predictions are used in the Trained_CNN accuracy_calculator_script 
-    - mini_batches_train: mini_batch_files of features generated from the sample audio in audio_dir. This if for users who wish to run the CNN_training script but wish to skip the CNN_minibtach_creation script. If Running the CNN_minibtach_creation, these files will be overwritten with identical files.
+    - minibatch_files: folders ready for the writing and pickling of minibatches for the train, validation and test sets created using the CNN_minibatch_creation and used by the CNN_training script. The train folder is already populated for users who want to jump straight to testing the creation of a custom pretrained CNN detaied below.
     - trained_CNN_saved_model: produced by the Produce_a_custom_pretrained_CNN script when using the sample audio. These files will be overwritten with identical files if users choose to run this script. 
     - If you executre the feature extraction scripts on the sample audio, they will be written here.
 
@@ -37,8 +37,8 @@ The workflow to replicate this analysis can be undertaken as follows:
 ### Trained CNN classifier
 
 1.	Start with the *CNN minibatch creation.ipynb* script. This performs log-mel spectrogram extraction on the example audio, splits these in minibatches and saves these as pickle files in the */Results/minibatches_* folders, where '_' represents the training, validation or test folder.
-2.	The *CNN_training.ipynb* script can then be used to train the CNN classifier on the example audio, where it learns to classify healthy and degraded reefs. This outputs predictions for test data to the */Results/Colab_CNN_predictions* folder in a .csv file. The .csv files for the full datasets used in this study are used from here on to reproduce the investigations results. These are saved in the */Results/full_dataset_features*. However, you could adapt the downstream scripts to run on your own feature sets from other audio.
-3.	The *Trained CNN accuracy calculator.ipynb* script is then used to take these .csv’s, pool predictions for each minute, and output an accuracy
+2.	The *CNN_training.ipynb* script can then be used to train the CNN classifier on the example audio, where it learns to classify healthy and degraded reefs. This outputs predictions for test data to the */Results/Colab_CNN_predictions* folder in a .csv file. The .csv files for the full datasets used in this study are used from here on to reproduce the investigations results. These are saved in the */Results/full_dataset_features/NEW...*. However, you could adapt the downstream scripts to run on your own feature sets from other audio.
+3.	The *Trained CNN accuracy calculator.ipynb* script is then used to take these .csv’s, pool predictions for each minute, and output an accuracy. This script uses the predictions for the full datasets used in this study in the *Results/CNN_predictions* folder.
 
 
 ### Creating your own pretrained CNN
