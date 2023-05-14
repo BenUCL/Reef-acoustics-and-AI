@@ -15,8 +15,8 @@ Additional items in the Zenodo repository are:
 3. audio_dir: 1.4GB of sample audio files – this is the full dataset used in previous work [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
 4. Results folder: 
     - CNN_predictions: *csv* files of the trained CNN class prediction for the habitat and site tasks for all three datasets. These predictions are used in the Trained_CNN accuracy_calculator_script 
-    - minibatch_files: folders ready for the writing and pickling of minibatches for the train, validation and test sets created using the CNN_minibatch_creation and used by the CNN_training script. The train folder is already populated for users who want to jump straight to testing the creation of a custom pretrained CNN detaied below.
-    - trained_CNN_saved_model: produced by the Produce_a_custom_pretrained_CNN script when using the sample audio. These files will be overwritten with identical files if users choose to run this script. 
+    - minibatch_files: folders ready for the writing and pickling of minibatches for the train, validation and test sets created using the CNN_minibatch_creation and used by the CNN_training script. The train folder is already populated for users who want to jump straight to testing the creation of a custom pretrained CNN detaied below using the sample audio.
+    - trained_CNN_saved_model: produced by the produce_a_custom_pretrained_CNN script when using the sample audio. These files will be overwritten with identical files if users choose to run this script. 
     - If you executre the feature extraction scripts on the sample audio, they will be written here.
 
 # Citing
