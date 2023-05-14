@@ -12,9 +12,12 @@ This Github repo contains:
 
 Additional items in the Zenodo repository are:
 
-3. 1.4GB of sample audio files – this is the full dataset used in previous work [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
-4. Results files as *.csv’s*, generated from all three datasets in full used in Williams et al. (2023).
-
+3. audio_dir: 1.4GB of sample audio files – this is the full dataset used in previous work [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
+4. Results folder: 
+    - full_dataset_features: *.csv’s*, generated from all three datasets in full used in Williams et al. (2023).
+    - mini_batches_train: mini_batch_files of features generated from the sample audio in audio_dir. This if for users who wish to run the CNN_training script but wish to skip the CNN_minibtach_creation script. If Running the CNN_minibtach_creation, these files will be overwritten with identical files.
+    - trained_CNN_saved_model: produced by the Produce_a_custom_pretrained_CNN script when using the sample audio. These files will be overwritten with identical files if users choose to run this script. 
+    - 
 
 # Citing
 If you use any code from this project, please cite: (tbc)
