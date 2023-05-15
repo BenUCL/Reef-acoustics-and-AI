@@ -2,7 +2,7 @@
 
 This GitHub repository contains material to support the upcoming publication: Williams et al. (2023). Unlocking the soundscapes of coral reefs with artificial intelligence.  Whilst created with coral reef soundscapes in mind, methods used in this investigation could be applied to any soundscape field.
 
-This repository provides code that can be used to complete the full analysis used in the project. Better still, you can download all the code alongside sample data from the Zenodo repository (https://zenodo.org/record/7810650). You can then upload this to your own Google Drive account and run all the analysis from your web browser using Google Colab, without the need to download and install python or any other software, see further instructions below. 
+This repository provides code that can be used to complete the full analysis used in the project. Better still, you can download all the code alongside sample data from the Zenodo repository (https://doi.org/10.5281/zenodo.7934020). You can then upload this to your own Google Drive account and run all the analysis from your web browser using Google Colab, without the need to download and install python or any other software, see further instructions below. 
 
 This Github repo contains: 
 
@@ -23,7 +23,7 @@ Additional items in the Zenodo repository are:
 If you use any code from this project, please cite: (tbc)
 
 # Useage
-The performance of three methods at supervised classifier and unsupervised clustering tasks were compared in this paper. To run the full workflow download the 'BenUCL/Reef-acoustics-and-AI-v1.1.zip' and 'sample_audio.zip' from the [Zenodo repository](https://zenodo.org/record/7810650). Unzip these and place the sample_audio folder into the other folder. Rename this ‘Reef soundscapes with AI’ and upload them to the MyDrive folder in your Google Drive (saving elsewhere on your drive, or with a different name, will prevent scripts from being able to find the right file path). The scripts will run on the sample audio now included in this folder on your Google Drive.
+The performance of three methods at supervised classifier and unsupervised clustering tasks were compared in this paper. To run the full workflow download the 'BenUCL/Reef-acoustics-and-AI-v1.1.zip' and 'sample_audio.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). Unzip these and place the sample_audio folder into the other folder. Rename this ‘Reef soundscapes with AI’ and upload them to the MyDrive folder in your Google Drive (saving elsewhere on your drive, or with a different name, will prevent scripts from being able to find the right file path). The scripts will run on the sample audio now included in this folder on your Google Drive.
 
 The workflow to replicate this analysis can be undertaken as follows:
 
