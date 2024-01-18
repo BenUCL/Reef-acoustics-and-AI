@@ -2,7 +2,7 @@
 
 This GitHub repository contains material to support the upcoming publication: Williams et al. (2023). Unlocking the soundscapes of coral reefs with artificial intelligence.  Whilst created with coral reef soundscapes in mind, methods used in this investigation could be applied to any soundscape.
 
-This repository provides code that can be used to complete the full analysis used in the project. You can download all the code alongside sample data from the Zenodo repository (https://doi.org/10.5281/zenodo.7934020). Note Google Colab no longer supports the versions of the required packages for VGGish. For use of the pretrained VGGish CNN follow: https://www.kaggle.com/models/google/vggish. Alternatively the vggish-env yaml file can be used to set up your own python environment which can run VGGish using the code shared in this repository.
+This repository provides code that can be used to complete the full analysis used in the project. You can download all the code alongside sample data from the Zenodo repository (https://doi.org/10.5281/zenodo.7934020).
 
 This Github repo contains: 
 
@@ -23,7 +23,13 @@ Additional items in the Zenodo repository are:
 If you use any code from this project, please cite: (tbc)
 
 # Useage
-The performance of three methods at supervised classifier and unsupervised clustering tasks were compared in this paper. To run the full workflow download the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). 
+To run the full workflow first download the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). Note Google Colab no longer supports the versions of the required packages for VGGish. For use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
+```
+cd "YOUR PATH\Reef-acoustics-and-AI"
+conda env create -f "Code\vggish-env.yml"
+conda activate vggish-env
+```
+Alternatively, for use on colab (removing the need to install python) adapt: https://www.kaggle.com/models/google/vggish.
 
 The workflow to replicate this analysis can be undertaken as follows:
 
