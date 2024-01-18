@@ -23,7 +23,7 @@ Additional items in the Zenodo repository are:
 If you use any code from this project, please cite: (tbc)
 
 # Useage
-To run the full workflow first download the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). Note Google Colab no longer supports the versions of the required packages for VGGish. For use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
+To run the full workflow first download and unzip the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). Note Google Colab no longer supports the versions of the required packages for VGGish. Instead, for use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
 ```
 cd "YOUR PATH\Reef-acoustics-and-AI"
 conda env create -f "Code\vggish-env.yml"
