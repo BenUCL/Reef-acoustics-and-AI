@@ -20,7 +20,7 @@ Additional items in the Zenodo repository are:
     - If you executre the feature extraction scripts on the sample audio, they will be written here.
 
 # Citing
-If you use any code from this project, please cite: (tbc)
+If you use any code from this project, please cite: [Williams et al (2024)](https://doi.org/10.1101/2024.02.02.578582).
 
 # Useage
 To run the full workflow first download and unzip the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). Note Google Colab no longer supports the versions of the required packages for VGGish. Instead, for use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
