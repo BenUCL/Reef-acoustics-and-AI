@@ -38,7 +38,7 @@ The workflow to replicate this analysis can be undertaken as follows:
 2.	Next, a machine learning classifier is trained to identify the classes (e.g healthy and degraded) using the *Random forests compound index _ .ipynb*. Here, ‘_’ represents the dataset (Indo, Aus or Poly) and task (habitat or site identifier). This performs cross validation and outputs accuracy scores for all repeats.
 
 ### Pretrained CNN classifier
-1.	Same as above, but instead of accessinf *compound index* scripts, access the *pretrained CNN* scripts.
+1.	Same as above, but instead of accessing *compound index* scripts, access the *pretrained CNN* scripts.
 2.	This will extract features from audio with the VGGish pretrained CNN, using 
 ### Trained CNN classifier
 
