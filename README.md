@@ -2,6 +2,22 @@
 
 This GitHub repository contains material to support the upcoming publication: Williams et al. (2023). Unlocking the soundscapes of coral reefs with artificial intelligence.  Whilst created with coral reef soundscapes in mind, methods used in this investigation could be applied to any soundscape.
 
+# Tutorial
+You are likely here because you wish to begin applying machine learning led analysis to your own soundscape data. Read on to learn how to get started...
+
+Passive acoustic monitoring data can be analysed in two broad ways. Often bioacousticians may manually listen to recordings and label individual sounds (e.g fish noise, bird species) then potentially train a detector on this. However, this can be slow, tricky and only allows bioacousticians to label a tiny subset of their true data. Alternatively, the whole soundscape can be used and compared, this sacrifices the granularity of individual sounds for big picture outputs at scale. Our paper focuses on the latter.
+
+In the associated paper, we show pairing pretrained neural networks with unsupervised learning algorithms provides the most insightful outputs. This retains an almost equal performance to training neural nets from scratch, whilst being orders of magnitude more computatinally efficient to run. This tutorial will guide users on how to begin using this analysis, using sample data from the worlds largest reef restoration program [buildingcoral.com](https://www.buildingcoral.com/). There are three key components:
+1. An introduction to using Google Colab: This allows users to run all the analysis from a web browser using data stored in Google Drive. Much easier than installing and settig up a local Python environment!
+2. Feature extraction: We show how to access the sample data and extract feature embeddings from this using a pretrained neural network. The outputs are saved to GDrive.
+3. Unsupervised learning: We show how to run UMAP visualisation which useful for visually exploring patterns in data. This notebook then shows how to cluster the data, useful for a quantitative output of findings.
+
+![Sample Data Clustering](https://github.com/BenUCL/Reef-acoustics-and-AI/blob/main/Tutorial/sample_data_clustering.png?raw=true)
+
+
+
+
+
 This repository provides code that can be used to complete the full analysis used in the project. You can download all the code alongside sample data from the Zenodo repository (https://doi.org/10.5281/zenodo.7934020).
 
 This Github repo contains: 
