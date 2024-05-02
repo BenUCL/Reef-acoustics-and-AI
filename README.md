@@ -22,8 +22,9 @@ In the associated paper, we show pairing pretrained neural networks with unsuper
 In the outputs from the tutorial (above) we see healthy and degraded reef soundscapes overlap at points, but mostly diverge. Interestingly we then see recordings from actively restored coral reefs are more likely to be assigned to clusters dominated by healthy recordings. This is just one example of how these approaches can be applied to soundscape analysis.
 
 
-
 # Code for the published study
+The below is mainly for reproducability of all methods tested in the original study, so the tutorial should suffice for most use cases.
+
 This repository provides code that was used to complete the full analysis used in the project. You can download all the code alongside sample data from the Zenodo repository (https://doi.org/10.5281/zenodo.7934020).
 
 Besides the tutorial, this Github repo contains: 
