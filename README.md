@@ -12,8 +12,10 @@ In the associated paper, we show pairing pretrained neural networks with unsuper
 2. Feature extraction: We show how to access the sample data and extract feature embeddings from this using a pretrained neural network. The outputs are saved to GDrive.
 3. Unsupervised learning: We show how to run UMAP visualisation which useful for visually exploring patterns in data. This notebook then shows how to cluster the data, useful for a quantitative output of findings.
 
-![Sample Data UMAP](https://github.com/BenUCL/Reef-acoustics-and-AI/blob/main/Tutorial/sample_data_umap.png?raw=true) ![Sample Data Clustering](https://github.com/BenUCL/Reef-acoustics-and-AI/blob/main/Tutorial/sample_data_clustering.png?raw=true)
-
+<p align="center">
+  <img src="https://github.com/BenUCL/Reef-acoustics-and-AI/blob/main/Tutorial/sample_data_umap.png?raw=true" width="400" height="300" style="margin-right: 10px;" />
+  <img src="https://github.com/BenUCL/Reef-acoustics-and-AI/blob/main/Tutorial/sample_data_clustering.png?raw=true" width="400" height="300" />
+</p>
 
 
 
