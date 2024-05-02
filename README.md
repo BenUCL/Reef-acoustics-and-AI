@@ -32,7 +32,7 @@ Besides the tutorial, this Github repo contains:
 2. The Audioset package also required for analyis, adapted by [Sethi et al. (2020)](https://www.pnas.org/doi/full/10.1073/pnas.2004702117) from [Hershey et al. (2017)](https://arxiv.org/abs/1609.09430).
 3. The full_dataset_features.zip which contains csv's of feature sets calculated from all three datasets using the compound index, pretrained CNN and features extracted by purpose trained CNNs.
 
-Additional items in the Zenodo repository are:
+Additional items in the Reef-acoustics-and-AI.zip within the Zenodo repository are:
 
 3. audio_dir: 1.4GB of sample audio files – this is the full dataset used in previous work [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
 4. Results folder: 
@@ -41,7 +41,7 @@ Additional items in the Zenodo repository are:
     - trained_CNN_saved_model: produced by the produce_a_custom_pretrained_CNN script when using the sample audio. These files will be overwritten with identical files if users choose to run this script. 
     - If you executre the feature extraction scripts on the sample audio, they will be written here.
 
-# Useage
+## Useage
 To run the full workflow first download and unzip the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). Note Google Colab no longer supports the versions of the required packages for VGGish. Instead, for use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
 ```
 cd "YOUR PATH\Reef-acoustics-and-AI"
