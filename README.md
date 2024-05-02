@@ -25,7 +25,7 @@ In the outputs from the tutorial (above) we see healthy and degraded reef sounds
 # Code for the published study
 The below is mainly for reproducability of all methods tested in the original study, so the tutorial should suffice for most use cases.
 
-This repository provides code that was used to complete the full analysis used in the project. You can download all the code alongside sample data from the Zenodo repository (https://doi.org/10.5281/zenodo.7934020).
+This repository provides code that was used to complete the full analysis used in the project. You can download all the code alongside sample data from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482).
 
 Besides the tutorial, this Github repo contains: 
 
@@ -43,7 +43,7 @@ Additional items in the Reef-acoustics-and-AI.zip within the Zenodo repository a
     - If you executre the feature extraction scripts on the sample audio, they will be written here.
 
 ## Useage
-To run the full workflow first download and unzip the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.7934020). Note Google Colab no longer supports the versions of the required packages for VGGish. Instead, for use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
+To run the full workflow first download and unzip the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482). Note Google Colab no longer supports the versions of the required packages for VGGish. Instead, for use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
 ```
 cd "YOUR PATH\Reef-acoustics-and-AI"
 conda env create -f "Code\vggish-env.yml"
