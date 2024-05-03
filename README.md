@@ -14,8 +14,8 @@ Passive acoustic monitoring data can be analysed in two broad ways. Often bioaco
 In the associated paper, we show pairing pretrained neural networks with unsupervised learning algorithms provides the most insightful outputs. This retains an almost equal performance to training neural nets from scratch, whilst being orders of magnitude more computatinally efficient to run. 
 
 ### How to run the tutorial
-This tutorial will guide users on how to begin using this analysis, using sample data from the worlds largest reef restoration program [buildingcoral.com](https://www.buildingcoral.com/). There are three key components:
-1. An introduction to using Google Colab: Colab allows users to run all the analysis from a web browser using data stored in Google Drive. Much easier than installing and settig up a local Python environment! 
+This tutorial will guide users on how to begin using this analysis, using sample data from the worlds largest reef restoration program [buildingcoral.com](https://www.buildingcoral.com/). In the Tutorial folder you will find three key components, you can open these up and hit 'Open in colab':
+1. Colab Demo: This is an introduction to using Google Colab. Colab allows users to run all the analysis from a web browser using data stored in Google Drive. Much easier than installing and settig up a local Python environment! 
 2. Feature extraction: We show how to access the sample data and extract feature embeddings from this using a pretrained neural network. The outputs are saved to GDrive.
 3. Unsupervised learning: We show how to run UMAP visualisation which useful for visually exploring patterns in data. This notebook then shows how to cluster the data, useful for a quantitative output of findings.
 
