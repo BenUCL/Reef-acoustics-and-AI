@@ -24,7 +24,7 @@ This tutorial will guide users on how to begin using this analysis, using sample
   <img src="https://github.com/BenUCL/Reef-acoustics-and-AI/blob/main/Tutorial/sample_data_clustering.png?raw=true" width="400" height="300" />
 </p>
 
-In the outputs from the tutorial (above) we see healthy and degraded reef soundscapes overlap at points, but mostly diverge. Interestingly we then see recordings from actively restored coral reefs are more likely to be assigned to clusters dominated by healthy recordings. This is just one example of how these approaches can be applied to soundscape analysis.
+In the outputs from the tutorial (above) we are seeing UMAP and clustering outputs of 5s recordings from healthy, degraded and restored reefs. We see healthy and degraded reef soundscapes overlap at points, but mostly diverge. Interestingly we then see recordings from actively restored coral reefs are more likely to be assigned to clusters dominated by healthy recordings. This is just one example of how these approaches can be applied to soundscape analysis.
 
 
 # Code for the published study
