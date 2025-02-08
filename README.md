@@ -28,9 +28,9 @@ In the outputs from the tutorial (above) we are seeing UMAP and clustering outpu
 
 
 # Code for the published study
-The below is mainly for reproducability of all methods tested in the original study, so the tutorial should suffice for most use cases.
+The Code folder dontains all code used during the study for transparency. The tutorial should suffice if you are aiming to apply the findings of this study to new use cases.
 
-This repository provides code that was used to complete the full analysis used in the project. You can download all the code alongside sample data from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482).
+All the raw data can also be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482).
 
 Besides the tutorial, this Github repo contains: 
 
