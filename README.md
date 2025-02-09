@@ -14,7 +14,7 @@ Passive acoustic monitoring data can be analysed in two broad ways. Often bioaco
 In the associated paper, we show pairing pretrained neural networks with unsupervised learning algorithms provides the most insightful outputs. This retains an almost equal performance to training neural nets from scratch, whilst being orders of magnitude more computatinally efficient to run. 
 
 ### How to run the tutorial
-This tutorial will guide users on how to begin using this analysis, using sample data from the worlds largest reef restoration program [buildingcoral.com](https://www.buildingcoral.com/). In the Tutorial folder you will find three key components, you can open these up and hit 'Open in colab':
+This tutorial will guide users on how to begin using this analysis, using sample data from the worlds largest reef restoration program [buildingcoral.com](https://www.buildingcoral.com/) used in [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986). In the Tutorial folder you will find three key components, you can open these up and hit 'Open in colab':
 1. Colab Demo: This is an introduction to using Google Colab. Colab allows users to run all the analysis from a web browser using data stored in Google Drive. Much easier than installing and settig up a local Python environment! 
 2. Feature extraction: We show how to access the sample data and extract feature embeddings from this using a pretrained neural network. The outputs are saved to GDrive.
 3. Unsupervised learning: We show how to run UMAP visualisation which useful for visually exploring patterns in data. This notebook then shows how to cluster the data, useful for a quantitative output of findings.
@@ -28,59 +28,42 @@ In the outputs from the tutorial (above) we are seeing UMAP and clustering outpu
 
 
 # Code for the published study
-The Code folder dontains all code used during the study for transparency. The tutorial should suffice if you are aiming to apply the findings of this study to new use cases.
+The Code folder contains all code used during the study for transparency. Note, as Google Colab's default environment updates, the code will no longer run in Colab. Instead, the tutorial should suffice if you are aiming to apply the findings of this study to new use cases. The code is organised as follows:
 
-All the raw data can also be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482).
-
-Besides the tutorial, this Github repo contains: 
-
-1. Code used to perform all analysis.
-2. The Audioset package also required for analyis, adapted by [Sethi et al. (2020)](https://www.pnas.org/doi/full/10.1073/pnas.2004702117) from [Hershey et al. (2017)](https://arxiv.org/abs/1609.09430).
-3. The full_dataset_features.zip which contains csv's of feature sets calculated from all three datasets using the compound index, pretrained CNN and features extracted by purpose trained CNNs.
-
-Additional items in the Reef-acoustics-and-AI.zip within the Zenodo repository are:
-
-3. audio_dir: 1.4GB of sample audio files – this is the full dataset used in previous work [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986).
-4. Results folder: 
-    - CNN_predictions: *csv* files of the trained CNN class prediction for the habitat and site tasks for all three datasets. These predictions are used in the Trained_CNN accuracy_calculator_script 
-    - minibatch_files: folders ready for the writing and pickling of minibatches for the train, validation and test sets created using the CNN_minibatch_creation and used by the CNN_training script. The train folder is already populated for users who want to jump straight to testing the creation of a custom pretrained CNN detaied below using the sample audio.
-    - trained_CNN_saved_model: produced by the produce_a_custom_pretrained_CNN script when using the sample audio. These files will be overwritten with identical files if users choose to run this script. 
-    - If you executre the feature extraction scripts on the sample audio, they will be written here.
-
-## Useage
-To run the full workflow first download and unzip the 'BenUCL/Reef-acoustics-and-AI-v1.2.zip' from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482). Note Google Colab no longer supports the versions of the required packages for VGGish. Instead, for use of the pretrained VGGish CNN use the *Code/vggish-env.yml* file to set up your own python environment which can run VGGish using the code shared in this repository. In a terminal run:
 ```
-cd "YOUR PATH\Reef-acoustics-and-AI"
-conda env create -f "Code\vggish-env.yml"
-conda activate vggish-env
+Code/
+│── Audioset/                     # Code from Sethi et al. (2020) for working with the VGGish CNN
+│── misc/                          # Miscellaneous analysis scripts
+│   ├── split_downsample_audio.ipynb   # Splits long audio into smaller segments & downsamples to 16kHz
+│   ├── boxplots.ipynb                 # Produces accuracy boxplots for the trained classifier
+│   ├── calc_tccn_acc.ipynb            # Reads results CSV & calculates T-CNN accuracy with confusion matrices
+│── custom_trained_cnn/            # Scripts for training a CNN from scratch
+│   ├── audio_preprocessing.ipynb      # Splits data into training, validation, and test sets; extracts log-mel spectrograms
+│   ├── cnn_training.ipynb             # Trains the VGGish CNN from scratch
+│── compound_index/                # Scripts for compound index feature extraction and classification
+│   ├── compound_index_extraction.ipynb   # Extracts compound index features from raw audio
+│   ├── rf_compound_index_*.ipynb        # Trains and evaluates RF classifiers for different datasets/tasks
+│── pretrained_cnn/                 # Scripts for using a pretrained CNN for classification
+│   ├── pretrained_cnn_extraction.ipynb  # Extracts features using a pretrained CNN
+│   ├── rf_pretrained_cnn_*.ipynb       # Trains and evaluates RF classifiers for different datasets/tasks
+│── unsupervised_learning/          # Scripts for unsupervised learning methods
+│   ├── clustering.ipynb                 # Runs affinity propagation clustering & Chi-square tests
+│   ├── UMAP_*.ipynb                     # Produces UMAP plots for each dataset
+│── vggish-env.yml                 # YAML file for setting up a local environment for VGGish feature extraction or training.
 ```
-Alternatively, for use on colab (removing the need to install python) adapt: https://www.kaggle.com/models/google/vggish.
 
-The workflow to replicate this analysis can be undertaken as follows:
+# Data
+All data can be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482). This repository contains an `outputs` folder which includes:
 
-### Compound index classifier
-1.	Perform feature extraction from example audio using a suite of compound indices using the Feature_extraction_with_compound_index.ipynb script. This will save a *.csv* file called *compound_index_features* to the *../Results* folder. The *.csv* files for the full datasets used in this study are used from here on to reproduce the investigations results. These are saved in the *.../Results/full_dataset_features*. However, you could adapt the downstream scripts to run on your own feature sets from other audio.
-2.	Next, a machine learning classifier is trained to identify the classes (e.g healthy and degraded) using the *Random forests compound index _ .ipynb*. Here, ‘_’ represents the dataset (Indo, Aus or Poly) and task (habitat or site identifier). This performs cross validation and outputs accuracy scores for all repeats.
+1. **raw-audio-indonesia.zip**: The raw audio files from the Indonesian dataset. To access the raw Australian and French Polynesian audio files please go to these repositories:
+   - [Australian dataset](https://zenodo.org/records/10539938)
+   - [French Polynesian dataset](https://zenodo.org/records/10539938)
+   
+2. **outputs.zip**:
+   - cnn_predictions.zip: The predictions from each training run of the CNN for each dataset and task.
+   - precomputed_features.zip: The features extracted with the compound index, pretrained CNN, and trained CNN for all datasets.
 
-### Pretrained CNN classifier
-1.	Same as above, but instead of accessing *compound index* scripts, access the *pretrained CNN* scripts.
-2.	This will extract features from audio with the VGGish pretrained CNN, using 
+3. **Supplementary 2 (interactive UMAP plots).zip**: The interactive UMAP plots which can be used to explore temporal trends from the data.
 
-### Trained CNN classifier
-
-1.	Start with the *CNN minibatch creation.ipynb* script. This performs log-mel spectrogram extraction on the example audio, splits these in minibatches and saves these as pickle files in the *.../Results/minibatches_* folders, where '_' represents the training, validation or test folder.
-2.	The *CNN_training.ipynb* script can then be used to train the CNN classifier on the example audio, where it learns to classify healthy and degraded reefs. This outputs predictions for test data to the *.../Results/Colab_CNN_predictions* folder in a .csv file. The .csv files for the full datasets used in this study are used from here on to reproduce the investigations results. These are saved in the *.../Results/full_dataset_features/*. 
-3.	The *Trained CNN accuracy calculator.ipynb* script is then used to take these .csv’s, pool predictions for each minute, and output an accuracy. This script uses the predictions for the full datasets used in this study in the *.../Results/CNN_predictions* folder.
-
-
-### Training pretrained CNNs
-
-1.	Custom pretrained CNN’s were produced from each dataset to perform unsupervised clustering. This was done by training the classifier to predict which site (which should always be known) that recordings came from. The scripts are currently set up to perform this on the example audio.
-2.	First, the *CNN minibatch creation.ipynb* script must be executed as above, under the Trained classifier heading.
-3.	The *Produce a custom pretrained CNN.ipynb* script can then be run.
-
-
-### UMAP and unsupervised clustering
-1.	UMAP plots are created using the *UMAP_.ipynb* scripts, where ‘_’ represents the datasets (Indo, Aud or Poly) to be used. These use the already calculated features sets for each method in the *.../Results/full_dataset_features* folder.
-2.	Unsupervised clustering is performed using the *Unsupervised clustering.ipynb* script, using the already calculated features sets from this investigations data.
+4. **tutorial_sample_data.zip**: 262 sample audio files used in the tutorial.
 

@@ -182,4 +182,3 @@ dependencies:
       - urllib3==2.0.2
       - werkzeug==2.3.3
       - wrapt==1.15.0
-prefix: C:\Users\Sustainable Solution\.conda\envs\bomb-detector-env
