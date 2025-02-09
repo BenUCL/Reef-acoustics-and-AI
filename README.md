@@ -32,29 +32,28 @@ The Code folder contains all code used during the study for transparency. Note, 
 
 ```
 Code/
-│── Audioset/                     # Code from Sethi et al. (2020) for working with the VGGish CNN
-│── misc/                          # Miscellaneous analysis scripts
-│   ├── split_downsample_audio.ipynb   # Splits long audio into smaller segments & downsamples to 16kHz
-│   ├── boxplots.ipynb                 # Produces accuracy boxplots for the trained classifier
-│   ├── calc_tccn_acc.ipynb            # Reads results CSV & calculates T-CNN accuracy with confusion matrices
-│── custom_trained_cnn/            # Scripts for training a CNN from scratch
-│   ├── audio_preprocessing.ipynb      # Splits data into training, validation, and test sets; extracts log-mel spectrograms
-│   ├── cnn_training.ipynb             # Trains the VGGish CNN from scratch
-│── compound_index/                # Scripts for compound index feature extraction and classification
-│   ├── compound_index_extraction.ipynb   # Extracts compound index features from raw audio
-│   ├── rf_compound_index_*.ipynb        # Trains and evaluates RF classifiers for different datasets/tasks
+│── Audioset/                     # Code from Sethi et al (2020) containing code to work with the VGGish CNN. We only import some of this code as modules.
+│── misc/                          # Miscellaneous analysis scripts.
+│   ├── split_downsample_audio.ipynb   #  Audio preprocessing. This was used to split longer audio files into desired length (e.g 1min) and downsample to required frequency (16kHz).
+│   ├── boxplots.ipynb                 # Produces accuracy boxplots for the trained CNN classifiers.
+│   ├── calc_tccn_acc.ipynb            # Used to read in the results csv containing predictions from the T-CNN and calculates each training runs accuracy. Also produces confusion matrix plots.
+│── custom_trained_cnn/            # Scripts for training the VGGish CNN from scratch.
+│   ├── audio_preprocessing.ipynb      # Splits data into training, validation, and test sets then extracts log-mel spectrograms
+│   ├── cnn_training.ipynb             # Trains the VGGish CNN from scratch on the preprocessed data.
+│── compound_index/                # Scripts for compound index feature extraction and classification.
+│   ├── compound_index_extraction.ipynb   # Used to extract the compound index features from raw audio.
+│   ├── rf_compound_index_*.ipynb        # Trains and evaluates RF classifiers for different datasets/tasks using the compound index features.
 │── pretrained_cnn/                 # Scripts for using a pretrained CNN for classification
-│   ├── pretrained_cnn_extraction.ipynb  # Extracts features using a pretrained CNN
-│   ├── rf_pretrained_cnn_*.ipynb       # Trains and evaluates RF classifiers for different datasets/tasks
-│── unsupervised_learning/          # Scripts for unsupervised learning methods
+│   ├── pretrained_cnn_extraction.ipynb  # Used to extract features from raw audio using the VGGish pretrained CNN.
+│   ├── rf_pretrained_cnn_*.ipynb       # Trains and evaluates RF classifiers for different datasets/tasks using the pretrained CNN features.
+│── unsupervised_learning/          # Scripts for unsupervised learning methods.
 │   ├── clustering.ipynb                 # Runs affinity propagation clustering & Chi-square tests
-│   ├── UMAP_*.ipynb                     # Produces UMAP plots for each dataset
+│   ├── UMAP_*.ipynb                     # Notebooks used to run the affinity propagation clustering and run the chiq-sq test for each country and task combination.
 │── vggish-env.yml                 # YAML file for setting up a local environment for VGGish feature extraction or training.
 ```
 
 # Data
-All data can be downloaded from the [Zenodo repository](https://doi.org/10.5281/zenodo.11106482). This repository contains an `outputs` folder which includes:
-
+All data can be downloaded from the [Zenodo repository](https://zenodo.org/records/14840526). This repository contains:
 1. **raw-audio-indonesia.zip**: The raw audio files from the Indonesian dataset. To access the raw Australian and French Polynesian audio files please go to these repositories:
    - [Australian dataset](https://zenodo.org/records/10539938)
    - [French Polynesian dataset](https://zenodo.org/records/10539938)
