@@ -1,6 +1,6 @@
 # About the project
 
-This GitHub repository contains material to support the upcoming publication: [Williams et al. (2024)](https://www.biorxiv.org/content/10.1101/2024.02.02.578582v1). Unlocking the soundscapes of coral reefs with artificial intelligence.  Whilst created with coral reef soundscapes in mind, methods used in this investigation could be applied to any soundscape.
+This GitHub repository contains material to support the upcoming publication: [Williams et al. (2024)](https://www.biorxiv.org/content/10.1101/2024.02.02.578582v1). Unlocking the soundscape of coral reefs with artificial intelligence.  Whilst created with coral reef soundscapes in mind, methods used in this investigation could be applied to any soundscape.
 
 If you use any of these methods or code from this study then please cite the article.
 
@@ -27,7 +27,7 @@ This tutorial will guide users on how to begin using this analysis, using sample
 In the outputs from the tutorial (above) we are seeing UMAP and clustering outputs of 5s recordings from healthy, degraded and restored reefs. We see healthy and degraded reef soundscapes overlap at points, but mostly diverge. Interestingly we then see recordings from actively restored coral reefs are more likely to be assigned to clusters dominated by healthy recordings. With minimal effort compared to annotating recorders, UMAP and unsupervised clustering can provide powerful insights such as these for a multitude of tasks.
 
 
-# Code for the published study
+# Code used during the study
 The Code folder contains all code used during the study for transparency. Note, as Google Colab's default environment updates, the code will no longer run in Colab. Instead, the tutorial should suffice if you are aiming to apply the findings of this study to new use cases. The code is organised as follows:
 
 ```
@@ -53,7 +53,7 @@ Code/
 ```
 
 # Data
-All data can be downloaded from the [Zenodo repository](https://zenodo.org/records/14840526). This repository contains:
+All data can be downloaded from the [Zenodo repository](https://zenodo.org/records/14841479). This repository contains:
 1. **raw-audio-indonesia.zip**: The raw audio files from the Indonesian dataset. To access the raw Australian and French Polynesian audio files please go to these repositories:
    - [Australian dataset](https://zenodo.org/records/10539938)
    - [French Polynesian dataset](https://zenodo.org/records/10539938)
