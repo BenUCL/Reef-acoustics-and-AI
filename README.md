@@ -47,24 +47,48 @@ The code is organised as follows:
 
 ```
 Code/
-│── Audioset/                     # Code from Sethi et al (2020) containing code to work with the VGGish CNN. We only import some of this code as modules.
-│── misc/                          # Miscellaneous analysis scripts.
-│   ├── split_downsample_audio.ipynb   #  Audio preprocessing. This was used to split longer audio files into desired length (e.g 1min) and downsample to required frequency (16kHz).
-│   ├── boxplots.ipynb                 # Produces accuracy boxplots for the trained CNN classifiers.
-│   ├── calc_tccn_acc.ipynb            # Used to read in the results csv containing predictions from the T-CNN and calculates each training runs accuracy. Also produces confusion matrix plots.
-│── custom_trained_cnn/            # Scripts for training the VGGish CNN from scratch.
-│   ├── audio_preprocessing.ipynb      # Splits data into training, validation, and test sets then extracts log-mel spectrograms
-│   ├── cnn_training.ipynb             # Trains the VGGish CNN from scratch on the preprocessed data.
-│── compound_index/                # Scripts for compound index feature extraction and classification.
-│   ├── compound_index_extraction.ipynb   # Used to extract the compound index features from raw audio.
-│   ├── rf_compound_index_*.ipynb        # Trains and evaluates RF classifiers for different datasets/tasks using the compound index features.
-│── pretrained_cnn/                 # Scripts for using a pretrained CNN for classification
-│   ├── pretrained_cnn_extraction.ipynb  # Used to extract features from raw audio using the VGGish pretrained CNN.
-│   ├── rf_pretrained_cnn_*.ipynb       # Trains and evaluates RF classifiers for different datasets/tasks using the pretrained CNN features.
-│── unsupervised_learning/          # Scripts for unsupervised learning methods.
-│   ├── clustering.ipynb                 # Runs affinity propagation clustering & Chi-square tests
-│   ├── UMAP_*.ipynb                     # Notebooks used to run the affinity propagation clustering and run the chiq-sq test for each country and task combination.
-│── vggish-env.yml                 # YAML file for setting up a local environment for VGGish feature extraction or training.
+# Code from Sethi et al (2020) containing code to use the VGGish CNN. We import this code as modules in other scripts.
+│── Audioset/   
+
+# Miscellaneous analysis scripts.          
+│── misc/               
+    # Audio preprocessing. This was used to split longer audio files into desired length (e.g 1min) and downsample to required frequency (16kHz).           
+│   ├── split_downsample_audio.ipynb  
+    # Produces accuracy boxplots for the trained CNN classifiers.
+│   ├── boxplots.ipynb                 
+    # Used to read in the results csv containing predictions from the T-CNN and calculates each training runs accuracy. Also produces confusion matrix plots.
+│   ├── calc_tccn_acc.ipynb      
+
+# Scripts for training the VGGish CNN from scratch.     
+│── custom_trained_cnn/         
+    # Splits data into training, validation, and test sets then extracts log-mel spectrograms and saves these to disk.
+│   ├── audio_preprocessing.ipynb    
+    # Trains the VGGish CNN from scratch on the preprocessed data.
+│   ├── cnn_training.ipynb  
+
+# Scripts for compound index feature extraction and classification.
+│── compound_index/              
+    # Used to extract the compound index features from raw audio.
+│   ├── compound_index_extraction.ipynb  
+    # Trains and evaluates RF classifiers for different datasets/tasks using the compound index features.
+│   ├── rf_compound_index_*.ipynb 
+
+# Scripts for pretrained CNN feature extractiona and classification.
+│── pretrained_cnn/     
+    # Used to extract features from raw audio using the VGGish pretrained CNN.            
+│   ├── pretrained_cnn_extraction.ipynb
+    # Trains and evaluates RF classifiers for different datasets/tasks using the pretrained CNN features.
+│   ├── rf_pretrained_cnn_*.ipynb    
+
+# Scripts for unsupervised learning methods.
+│── unsupervised_learning/        
+    # Runs affinity propagation clustering & Chi-square tests.
+│   ├── clustering.ipynb      
+    # Notebooks used to run the affinity propagation clustering and run the chiq-sq test for each country and task combination.           
+│   ├── UMAP_*.ipynb           
+
+# YAML file for setting up a local environment for VGGish feature extraction or training.
+│── vggish-env.yml                 
 ```
 
 # Install the conda environment used for this project locally
