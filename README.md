@@ -26,9 +26,24 @@ This tutorial will guide users on how to begin using this analysis, using sample
 
 In the outputs from the tutorial (above) we are seeing UMAP and clustering outputs of 5s recordings from healthy, degraded and restored reefs. We see healthy and degraded reef soundscapes overlap at points, but mostly diverge. Interestingly we then see recordings from actively restored coral reefs are more likely to be assigned to clusters dominated by healthy recordings. With minimal effort compared to annotating recorders, UMAP and unsupervised clustering can provide powerful insights such as these for a multitude of tasks.
 
+# Data
+All data used in this study can be downloaded from the [Zenodo repository](https://zenodo.org/records/14841479). This repository contains:
+1. **raw-audio-indonesia.zip**: The raw audio files from the Indonesian dataset. To access the raw Australian and French Polynesian audio files please go to these repositories:
+   - [Australian dataset](https://zenodo.org/records/10539938)
+   - [French Polynesian dataset](https://zenodo.org/records/10539938)
+   
+2. **outputs.zip**:
+   - cnn_predictions.zip: The predictions from each training run of the CNN for each dataset and task.
+   - precomputed_features.zip: The features extracted with the compound index, pretrained CNN, and trained CNN for all datasets.
+
+3. **Supplementary 2 (interactive UMAP plots).zip**: The interactive UMAP plots which can be used to explore temporal trends from the data.
+
+4. **tutorial_sample_data.zip**: 262 sample audio files used in the tutorial.
 
 # Code used during the study
-The Code folder contains all code used during the study for transparency. Note, as Google Colab's default environment updates, the code will no longer run in Colab. Instead, the tutorial should suffice if you are aiming to apply the findings of this study to new use cases. The code is organised as follows:
+The Code folder contains all code used during the study for transparency. Note, as Google Colab's default environment updates, the code will no longer run in Colab. Instead, the tutorial should suffice if you are aiming to apply the findings of this study to new use cases. Alternativdly, you can follow the instructions for local install of the env below. 
+
+The code is organised as follows:
 
 ```
 Code/
@@ -52,17 +67,30 @@ Code/
 │── vggish-env.yml                 # YAML file for setting up a local environment for VGGish feature extraction or training.
 ```
 
-# Data
-All data can be downloaded from the [Zenodo repository](https://zenodo.org/records/14841479). This repository contains:
-1. **raw-audio-indonesia.zip**: The raw audio files from the Indonesian dataset. To access the raw Australian and French Polynesian audio files please go to these repositories:
-   - [Australian dataset](https://zenodo.org/records/10539938)
-   - [French Polynesian dataset](https://zenodo.org/records/10539938)
-   
-2. **outputs.zip**:
-   - cnn_predictions.zip: The predictions from each training run of the CNN for each dataset and task.
-   - precomputed_features.zip: The features extracted with the compound index, pretrained CNN, and trained CNN for all datasets.
+# Install the conda environment used for this project locally
+If you want to install the conda env used for model inference and training locally, then follow these steps. Note, the tutorial is offered in Google Colab meaning you do not need to install this locally, it will instead open up in your web browser and run in a cloud environment.
 
-3. **Supplementary 2 (interactive UMAP plots).zip**: The interactive UMAP plots which can be used to explore temporal trends from the data.
+```
+# clone this repo and navigate to it
+git clone https://github.com/BenUCL/Reef-acoustics-and-AI.git 
+cd Reef-acoustics-and-AI
+```
 
-4. **tutorial_sample_data.zip**: 262 sample audio files used in the tutorial.
+You will then need to download the vggish_model.ckpt file from the following link: 
+https://storage.googleapis.com/audioset/vggish_model.ckpt
 
+Then place this in the Audioset folder and run the following commands:
+
+```
+# Recreate the conda env from the .yml
+conda env create --file vggish-env.yml --name vggish-env 
+
+# Activate the conda env
+conda activate vggish-env 
+
+# Run the smoke test to check vggish is working in the env. Should return 'Looks good to me!'.
+cd Audioset
+python vggish_smoketest.py
+
+# You may be required to pip install alternative versions of some minor packages.
+```
