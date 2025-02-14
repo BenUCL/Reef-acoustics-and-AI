@@ -41,7 +41,7 @@ All data used in this study can be downloaded from the [Zenodo repository](https
 4. **tutorial_sample_data.zip**: 262 sample audio files used in the tutorial.
 
 # Code used during the study
-The Code folder contains all code used during the study for transparency. Note, as Google Colab's default environment updates, the code will no longer run in Colab. Instead, the tutorial should suffice if you are aiming to apply the findings of this study to new use cases. Alternativdly, you can follow the instructions for local install of the env below. 
+The Code folder contains all code used during the study for transparency. Note, as Google Colab's default environment updates, the code will no longer run in Colab. Instead, the tutorial should suffice if you are aiming to apply the findings of this study to new use cases. Alternatively, you can follow the instructions for local install of the env below. 
 
 The code is organised as follows:
 
@@ -97,7 +97,7 @@ If you want to install the conda env used for model inference and training local
 ```
 # clone this repo and navigate to it
 git clone https://github.com/BenUCL/Reef-acoustics-and-AI.git 
-cd Reef-acoustics-and-AI
+cd Reef-acoustics-and-AI/Code
 ```
 
 You will then need to download the vggish_model.ckpt file from the following link: 

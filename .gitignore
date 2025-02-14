@@ -1,3 +1,3 @@
 scratch/
 __pycache__/
-Audioset/vggish_model.ckpt
+**/vggish_model.ckpt
