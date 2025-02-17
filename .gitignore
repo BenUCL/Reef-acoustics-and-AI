@@ -1,3 +1,4 @@
 scratch/
 __pycache__/
 **/vggish_model.ckpt
+.ipynb_checkpoints/
