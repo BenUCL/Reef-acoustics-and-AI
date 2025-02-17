@@ -1,3 +1,8 @@
 scratch/
 __pycache__/
 **/vggish_model.ckpt
+.ipynb_checkpoints/
+
+Tutorial/audio/
+Tutorial/outputs/
+Tutorial/model/
