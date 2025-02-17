@@ -15,8 +15,8 @@ In the associated paper, we show pairing pretrained neural networks with unsuper
 
 ### How to run the tutorial
 This tutorial will guide users on how to begin using this analysis, using sample data from the worlds largest reef restoration program [buildingcoral.com](https://www.buildingcoral.com/) used in [Williams et al (2022)](https://doi.org/10.1016/j.ecolind.2022.108986). In the Tutorial folder you will find three key components, you can open these up and hit 'Open in colab':
-1. Colab Demo: This is an introduction to using Google Colab. Colab allows users to run all the analysis from a web browser using data stored in Google Drive. Much easier than installing and setting up a local Python environment! 
-2. Feature extraction: We show how to access the sample data and extract feature embeddings from this using a pretrained neural network. The outputs are saved to GDrive.
+1. Colab Demo: This is an introduction to using Google Colab. Colab allows users to run all the analysis from a web browser using data stored in Google Drive or Zenodo. Much easier than installing and setting up a local Python environment! 
+2. Feature extraction: We show how to access the sample data and extract feature embeddings from this using a pretrained neural network.
 3. Unsupervised learning: We show how to run UMAP visualisation which useful for visually exploring patterns in data. This notebook then shows how to cluster the data, useful for a quantitative output of findings.
 
 <p align="center">
@@ -91,8 +91,8 @@ Code/
 │── vggish-env.yml                 
 ```
 
-# Install the conda environment used for this project locally
-If you want to install the conda env used for model inference and training locally, then follow these steps. Note, the tutorial is offered in Google Colab meaning you do not need to install this locally, it will instead open up in your web browser and run in a cloud environment.
+# Install the environment used for this project locally
+If you want to install the environment used for model inference and training locally, then follow these steps. Note, the tutorial is also offered in Google Colab meaning you do not need to install this locally, it will instead open up in your web browser and run in a cloud environment.
 
 ```
 # clone this repo and navigate to it
