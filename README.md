@@ -58,6 +58,8 @@ Code/
 │   ├── boxplots.ipynb                 
     # Used to read in the results csv containing predictions from the T-CNN and calculates each training runs accuracy. Also produces confusion matrix plots.
 │   ├── calc_tccn_acc.ipynb      
+    # Code to reproduce supplementary figure 4, containing maps of the study sites using open source base layers (CC BY 4.0 compliant)
+│   ├── plotting_maps.ipynb      
 
 # Scripts for training the VGGish CNN from scratch.     
 │── custom_trained_cnn/         
